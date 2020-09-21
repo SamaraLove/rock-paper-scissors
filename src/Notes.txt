@@ -1,0 +1,62 @@
+// rock paper scissors horse
+
+choices = [
+    {
+        selected: "rock"
+        beats: [
+            "scissors",
+            "horse"
+        ],
+        loses: ["paper"]
+    },
+    {
+        selected: "scissors"
+        beats: [
+            "paper",
+            "horse"
+        ],
+        loses: ["rock"]
+    },
+    {
+        selected: "paper"
+        beats: [
+            "rock",
+            "horse"
+        ],
+        loses: ["scissors"]
+    },
+    {
+        selected: "horse"
+        beats: [],
+        loses: ["rock","paper","scissors"]
+    }
+]
+
+// rock (me) horse (cpu)
+// Find choice where choice = "rock"
+
+const myChoice = choices.find((choice) => choice.selected === humanGuess);
+
+   myChoice = {
+        choice: "rock"
+        beats: [
+            "scissors",
+            "horse"
+        ],
+        loses: ["paper"]
+    },
+
+// cpu select win or lose?
+
+// CPU win?
+// myChoice.beats.include("horse") => true 
+// beats.include("paper") => false
+
+// CPU loses?
+// myChoice.loses.include("horse") => false
+
+// ELSE = DRAW
+
+
+
+_.find(choices, function(choice) { return choice.selected === humanGuess; });
